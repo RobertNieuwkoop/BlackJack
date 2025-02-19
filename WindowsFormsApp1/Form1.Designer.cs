@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class BlackJackForm
     {
         /// <summary>
         /// Required designer variable.
@@ -41,14 +41,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // Form1
+            // BlackJackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "BlackJackForm";
+            this.Text = "Blackjack";
+            this.ResizeBegin += new System.EventHandler(this.BlackJackForm_ResizeBegin);
             this.ResumeLayout(false);
 
         }
