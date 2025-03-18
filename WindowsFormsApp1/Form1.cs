@@ -7,25 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.classes;
 
 namespace WindowsFormsApp1
 {
     public partial class BlackJackForm: Form
     {
-        Class1 c = new Class1();
+        Deck deck = new Deck();
         public BlackJackForm()
         {
             InitializeComponent();
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Hello World");
+            Card drawnCard = deck.DrawCard();
+            if(drawnCard != null)
+            {
+                cardLabel.Text = drawnCard.ToString();
+                pictureBox1.Image = drawnCard.Image;
+            }
         }
 
-        private void BlackJackForm_ResizeBegin(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
